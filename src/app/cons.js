@@ -1,0 +1,1 @@
+export default IPP = 10;

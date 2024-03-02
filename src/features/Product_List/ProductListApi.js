@@ -10,12 +10,22 @@ export function fetchAllProducts() {
 }
 
 //fetching same type products by id from the server using filter 
-export function fetchProductsByFilters(filter) {
+export function fetchProductsByFilters(filter,sort) {
   // filter = {"category":"smartphone"}
  
   let queryString = '';
   for(let key in filter){
-    queryString += `${key}=${filter[key]}&`
+    const categoryValues = filter[key];
+    if(categoryValues.length){
+      const lastCategoryValue = categoryValues[categoryValues.length-1]
+      queryString += `${key}=${lastCategoryValue}&`
+    }
+  }
+  
+  // itrate itams which is sort  array and add '&' to make string valid
+  for(let key in sort){
+    queryString += `${key}=${sort[key]}&`
+    // queryString += `${key}=${filter[key]}&`
   }
 
   return new Promise(async (resolve) =>{

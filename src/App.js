@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Counter } from './features/counter/Counter';
 import './App.css';
 import Home from './Pages/Home';
@@ -44,12 +43,6 @@ const router = createBrowserRouter([
   },
  
 ]);
-=======
-import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
-import "./App.css";
->>>>>>> c3ecd63e1858507c68dd45e4e6baff0548d5b716
 
 function App() {
   return (
