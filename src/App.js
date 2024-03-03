@@ -10,7 +10,7 @@ import {
   Link,
 } from 'react-router-dom';
 // import SignupPage from './Pages/SignupPage';
-import Signup from './features/Authentication/Components/SignUp';
+// import Signup from './features/Authentication/Components/SignUp';
 import CartPage from './Pages/CartPage';
 import Checkout from './Pages/CheckOutPage';
 import ProductDetailPage from './Pages/ProductDetailsPage';
@@ -19,10 +19,10 @@ import ProductList from './features/Product_List/ProductList';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home>,
+    element:<Home></Home>,
   },
   {
-    path: '/login',
+    path:'/login',
     element: <LoginPage></LoginPage>,
   },
   {

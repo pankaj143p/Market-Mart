@@ -1,1 +1,3 @@
-export default IPP = 10;
+
+
+export const ITEMS_PER_PAGE = 10;
