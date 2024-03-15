@@ -1,4 +1,4 @@
-import { Counter } from './features/counter/Counter';
+// import { Counter } from './features/counter/Counter';
 import './App.css';
 import Home from './Pages/Home';
 import LoginPage from './Pages/LoginPage'
@@ -20,6 +20,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectLoggedInUser } from './features/Authentication/AuthSlice';
 import { fetchItemsByUserIdAsync } from './features/Cart/CartSlice';
 import ProductList from './features/Product_List/ProductList';
+import Categories from './features/Categories/Categories';
+
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,10 @@ const router = createBrowserRouter([
      element: <Checkout></Checkout>
   },
   {
+    path: '/categories',
+    element: <Categories></Categories>
+ },
+  {
     path: '/product-detail/:id',
     element: (
       <Protected>
@@ -58,6 +64,7 @@ const router = createBrowserRouter([
       </Protected>
     ),
   },
+
  
 ]);
 
