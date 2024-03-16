@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { selectLoggedInUser } from "../AuthSlice";
+import { selectLoggedInUser } from "../Authentication/AuthSlice";
 
 function Protected({children}) {
     const user = useSelector(selectLoggedInUser)

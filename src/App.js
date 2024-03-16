@@ -3,6 +3,10 @@ import './App.css';
 import Home from './Pages/Home';
 import LoginPage from './Pages/LoginPage'
 import SignupPage from './Pages/SignupPage';
+import PageNotFound from './Pages/404Page';
+import OrderSuccessPage from './Pages/orderSuccessPage';
+// import userOrders from './features/Authentication/Components/user/userOrders';
+import UserOrdersPage from './Pages/userOrderPage';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,7 +18,7 @@ import {
 import CartPage from './Pages/CartPage';
 import Checkout from './Pages/CheckOutPage';
 import ProductDetailPage from './Pages/ProductDetailsPage';
-import Protected from './features/Authentication/Components/Protected';
+import Protected from './features/Components/Protected';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLoggedInUser } from './features/Authentication/AuthSlice';
@@ -65,7 +69,25 @@ const router = createBrowserRouter([
     ),
   },
 
- 
+  {
+    path: '/order-success/:id',
+    element: (
+      <OrderSuccessPage></OrderSuccessPage>
+    ),
+  },
+  {
+    path: '/orders',
+    element: (
+      <UserOrdersPage></UserOrdersPage>
+      // we will add Page later right now using component directly.
+    ),
+  },
+  {
+    path: '*',
+    element: (
+      <PageNotFound></PageNotFound>
+    ),
+  },
 ]);
 
 function App() {
