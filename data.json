@@ -2478,7 +2478,17 @@
       "id": "346d",
       "email": "prajapatipankajprajapati64@gmail.com",
       "password": "112233pP",
-      "addresses": []
+      "addresses": [
+        {
+          "name": "Pankaj Prajapati",
+          "email": "pankaj114477pankaj@gmail.com",
+          "phone": "09179213653",
+          "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+          "city": "Madhusoodangarh",
+          "state": "Madhya Pradesh",
+          "pinCode": "473287"
+        }
+      ]
     }
   ],
   "cart": [],
@@ -4002,6 +4012,134 @@
       },
       "paymentMethod": "cash",
       "selectedAddress": null,
+      "status": "pending"
+    },
+    {
+      "id": "ceca",
+      "items": [
+        {
+          "id": "4629",
+          "title": "Samsung Galaxy Book",
+          "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+          "price": 1499,
+          "discountPercentage": 4.15,
+          "rating": 4.25,
+          "stock": 50,
+          "brand": "Samsung",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/7/1.jpg",
+            "https://i.dummyjson.com/data/products/7/2.jpg",
+            "https://i.dummyjson.com/data/products/7/3.jpg",
+            "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "346d"
+        },
+        {
+          "id": "c1d6",
+          "title": "Samsung Galaxy Book",
+          "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+          "price": 1499,
+          "discountPercentage": 4.15,
+          "rating": 4.25,
+          "stock": 50,
+          "brand": "Samsung",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/7/1.jpg",
+            "https://i.dummyjson.com/data/products/7/2.jpg",
+            "https://i.dummyjson.com/data/products/7/3.jpg",
+            "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "346d"
+        }
+      ],
+      "totalAmount": 2998,
+      "totalItems": 2,
+      "user": {
+        "id": "346d",
+        "email": "prajapatipankajprajapati64@gmail.com",
+        "password": "112233pP",
+        "addresses": [
+          {
+            "name": "Pankaj Prajapati",
+            "email": "pankaj114477pankaj@gmail.com",
+            "phone": "09179213653",
+            "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+            "city": "Madhusoodangarh",
+            "state": "Madhya Pradesh",
+            "pinCode": "473287"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pankaj Prajapati",
+        "email": "pankaj114477pankaj@gmail.com",
+        "phone": "09179213653",
+        "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+        "city": "Madhusoodangarh",
+        "state": "Madhya Pradesh",
+        "pinCode": "473287"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3d77",
+      "items": [
+        {
+          "id": "3c83",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+          ],
+          "quantity": 5,
+          "user": "346d"
+        }
+      ],
+      "totalAmount": 4495,
+      "totalItems": 5,
+      "user": {
+        "id": "346d",
+        "email": "prajapatipankajprajapati64@gmail.com",
+        "password": "112233pP",
+        "addresses": [
+          {
+            "name": "Pankaj Prajapati",
+            "email": "pankaj114477pankaj@gmail.com",
+            "phone": "09179213653",
+            "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+            "city": "Madhusoodangarh",
+            "state": "Madhya Pradesh",
+            "pinCode": "473287"
+          }
+        ]
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pankaj Prajapati",
+        "email": "pankaj114477pankaj@gmail.com",
+        "phone": "09179213653",
+        "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+        "city": "Madhusoodangarh",
+        "state": "Madhya Pradesh",
+        "pinCode": "473287"
+      },
       "status": "pending"
     }
   ]

@@ -8,12 +8,12 @@ import {
 import { Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import {
-  selectLoggedInUser,
+ 
   updateUserAsync,
 } from '../features/Authentication/AuthSlice';
 import { useState } from 'react';
 import { createOrderAsync,selectCurrentOrder} from '../features/Orders/OrdersSlice';
-
+import { selectUserInfo } from '../features/user/userSlice';
 
 function Checkout() {
  
@@ -26,7 +26,8 @@ function Checkout() {
   } = useForm();
 
                 
-  const user = useSelector(selectLoggedInUser);
+  // const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectUserInfo);
   const items = useSelector(selectItems);
   const currentOrder = useSelector(selectCurrentOrder);
   const totalAmount = items.reduce(
@@ -68,9 +69,12 @@ function Checkout() {
     const order = {items, totalAmount, totalItems, user, paymentMethod, selectedAddress,
       status: 'pending'};
     dispatch(createOrderAsync(order))
-    //TODO : Redirect to order-success page
-    //TODO : clear cart after order
-    //TODO : on server change the stock number of items
+    //Redirect to order-success page
+    
+    //clear cart after order
+    
+    
+    //on server change the stock number of items
   };
 
 
