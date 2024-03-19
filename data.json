@@ -2489,6 +2489,22 @@
           "pinCode": "473287"
         }
       ]
+    },
+    {
+      "id": "a6e7",
+      "email": "pankaj123@gmail.com",
+      "password": "112233pP",
+      "addresses": [
+        {
+          "name": "Pankaj Prajapati",
+          "email": "pankaj114477pankaj@gmail.com",
+          "phone": "09179213653",
+          "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+          "city": "Madhusoodangarh",
+          "state": "Madhya Pradesh",
+          "pinCode": "473287"
+        }
+      ]
     }
   ],
   "cart": [],
@@ -4131,6 +4147,188 @@
         ]
       },
       "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pankaj Prajapati",
+        "email": "pankaj114477pankaj@gmail.com",
+        "phone": "09179213653",
+        "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+        "city": "Madhusoodangarh",
+        "state": "Madhya Pradesh",
+        "pinCode": "473287"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b068",
+      "items": [
+        {
+          "id": "5923",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "a6e7"
+        },
+        {
+          "id": "fe68",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "a6e7"
+        }
+      ],
+      "totalAmount": 1798,
+      "totalItems": 2,
+      "user": {
+        "id": "a6e7",
+        "email": "pankaj123@gmail.com",
+        "password": "112233pP",
+        "addresses": []
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null,
+      "status": "pending"
+    },
+    {
+      "id": "f2ce",
+      "items": [
+        {
+          "id": "1eef",
+          "title": "women winter clothes",
+          "description": "women winter clothes thick fleece hoodie top with sweat pantjogger women sweatsuit set joggers pants two piece pants set",
+          "price": 57,
+          "discountPercentage": 13.39,
+          "rating": 4.91,
+          "stock": 84,
+          "brand": "Top Sweater",
+          "category": "tops",
+          "thumbnail": "https://i.dummyjson.com/data/products/40/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/40/1.jpg",
+            "https://i.dummyjson.com/data/products/40/2.jpg"
+          ],
+          "quantity": 1,
+          "user": "a6e7"
+        }
+      ],
+      "totalAmount": 57,
+      "totalItems": 1,
+      "user": {
+        "id": "a6e7",
+        "email": "pankaj123@gmail.com",
+        "password": "112233pP",
+        "addresses": [
+          {
+            "name": "Pankaj Prajapati",
+            "email": "pankaj114477pankaj@gmail.com",
+            "phone": "09179213653",
+            "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+            "city": "Madhusoodangarh",
+            "state": "Madhya Pradesh",
+            "pinCode": "473287"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pankaj Prajapati",
+        "email": "pankaj114477pankaj@gmail.com",
+        "phone": "09179213653",
+        "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+        "city": "Madhusoodangarh",
+        "state": "Madhya Pradesh",
+        "pinCode": "473287"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a294",
+      "items": [
+        {
+          "id": "ab05",
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
+          "brand": "Apple",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+          "images": [
+            "https://i.dummyjson.com/data/products/6/1.png",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.png",
+            "https://i.dummyjson.com/data/products/6/4.jpg"
+          ],
+          "quantity": 1,
+          "user": "a6e7"
+        },
+        {
+          "id": "2b0c",
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
+          "brand": "Apple",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+          "images": [
+            "https://i.dummyjson.com/data/products/6/1.png",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.png",
+            "https://i.dummyjson.com/data/products/6/4.jpg"
+          ],
+          "quantity": 3,
+          "user": "a6e7"
+        }
+      ],
+      "totalAmount": 6996,
+      "totalItems": 4,
+      "user": {
+        "id": "a6e7",
+        "email": "pankaj123@gmail.com",
+        "password": "112233pP",
+        "addresses": [
+          {
+            "name": "Pankaj Prajapati",
+            "email": "pankaj114477pankaj@gmail.com",
+            "phone": "09179213653",
+            "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+            "city": "Madhusoodangarh",
+            "state": "Madhya Pradesh",
+            "pinCode": "473287"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
       "selectedAddress": {
         "name": "Pankaj Prajapati",
         "email": "pankaj114477pankaj@gmail.com",
