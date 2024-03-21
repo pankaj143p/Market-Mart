@@ -29,6 +29,7 @@ import { fetchItemsByUserIdAsync } from './features/Cart/CartSlice';
 import ProductList from './features/Product_List/ProductList';
 import Categories from './features/Categories/Categories';
 import ForgetPage from './Pages/ForgetPage';
+import LogoutPage from './Pages/LogoutPage';
 
 
 const router = createBrowserRouter([
@@ -96,6 +97,12 @@ const router = createBrowserRouter([
     path: '*',
     element: (
       <PageNotFound></PageNotFound>
+    ),
+  },
+  {
+    path: '/logout',
+    element: (
+      <LogoutPage></LogoutPage>
     ),
   },
   {

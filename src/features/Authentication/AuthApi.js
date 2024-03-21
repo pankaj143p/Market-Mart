@@ -12,6 +12,12 @@ export function createUser(userData) {
     resolve({ data });
   });
 }
+export function LogoutUser(userId) {
+  return new Promise(async (resolve) => {
+
+    resolve({ data : 'success'});
+  });
+}
 
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
