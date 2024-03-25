@@ -15,6 +15,6 @@ export default function LogoutPage() {
      <>
        {!user && <Navigate to='/login' replace={true}></Navigate>}
      </>   
-  )
-}
+  ) 
+} 
 
