@@ -48,50 +48,50 @@ const router = createBrowserRouter([
     path: '/signup',
     element: <SignupPage></SignupPage>
   },
-  {
-    path: '/cart',
-    element: (
-      <Protected>
-        <CartPage></CartPage>
-      </Protected>
-    ),
-  },
-  {
-     path: '/checkout',
-     element: <Checkout></Checkout>
-  },
-  {
-    path: '/categories',
-    element: <Categories></Categories>
- },
-  {
-    path: '/product-detail/:id',
-    element: (
-      <Protected>
-        <ProductDetailPage></ProductDetailPage>
-      </Protected>
-    ),
-  },
+  // {
+  //   path: '/cart',
+  //   element: (
+  //     <Protected>
+  //       <CartPage></CartPage>
+  //     </Protected>
+  //   ),
+  // },
+  // {
+  //    path: '/checkout',
+  //    element: <Checkout></Checkout>
+  // },
+//   {
+//     path: '/categories',
+//     element: <Categories></Categories>
+//  },
+  // {
+  //   path: '/product-detail/:id',
+  //   element: (
+  //     <Protected>
+  //       <ProductDetailPage></ProductDetailPage>
+  //     </Protected>
+  //   ),
+  // },
 
-  {
-    path: '/order-success/:id',
-    element: (
-      <OrderSuccessPage></OrderSuccessPage>
-    ),
-  },
-  {
-    path: '/orders',
-    element: (
-      <UserOrdersPage></UserOrdersPage>
-      // we will add Page later right now using component directly.
-      ),
-    },
-    {
-      path: '/profile',
-      element: (
-        <UserProfilePage></UserProfilePage>
-    ),
-  },
+  // {
+  //   path: '/order-success/:id',
+  //   element: (
+  //     <OrderSuccessPage></OrderSuccessPage>
+  //   ),
+  // },
+  // {
+  //   path: '/orders',
+  //   element: (
+  //     <UserOrdersPage></UserOrdersPage>
+  //     // we will add Page later right now using component directly.
+  //     ),
+  //   },
+    // {
+    //   path: '/profile',
+    //   element: (
+    //     <UserProfilePage></UserProfilePage>
+    // ),
+  // },
   {
     path: '*',
     element: (

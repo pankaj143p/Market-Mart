@@ -9,21 +9,21 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../Cart/CartSlice';
 const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
+  name: 'Pankaj Prajapati',
+  email: 'pankaj114477pankajgmail.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xV_sHdFZBscFLg8qrvE5ksKeshcWUl1QjyIrnGdt9w&s',
 };
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Categories', href: 'categories', current: false },
+  { name: 'About', href: '#', current: false },
+  // { name: '', href: 'categories', current: false },
 ];
 const userNavigation = [
 
-  { name: 'My Profile', link: '/profile' },
-  { name: 'My Orders', link: '/orders' },
-  { name: 'Sign out', link: '/logout' },
+  { name: 'Profile', link: '/profile' },
+  // { name: 'Orders', link: '/orders' },
+  // { name: 'Logout', link: '/logout' },
 ];
 
 function classNames(...classes) {
@@ -190,7 +190,7 @@ function NavBar({ children }) {
                         {user.email}
                       </div>
                     </div>
-                    <Link to="/cart">
+                    {/* <Link to="/cart">
                       <button
                         type="button"
                         className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -200,7 +200,7 @@ function NavBar({ children }) {
                           aria-hidden="true"
                         />
                       </button>
-                    </Link>
+                    </Link> */}
                     {/* <span className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                       3
                     </span> */}
@@ -230,7 +230,7 @@ function NavBar({ children }) {
         <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              E-Commerce
+              Market-Mart
             </h1>
           </div>
         </header>
