@@ -113,7 +113,7 @@ export default function ProductList() {
         ></MobileFilter>
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
+          <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-12">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
               All Products
             </h1>
@@ -328,7 +328,9 @@ function MobileFilter({
 // function DesktopFilter({ handleFilter }) {
 function DesktopFilter({ handleFilter, filters }) {
   return (
+
     <form className="hidden lg:block">
+    
       {filters.map((section) => (
         <Disclosure
           as="div"
@@ -440,8 +442,8 @@ function Pagination({ page, setPage, handlePage, totalItems }) {
                 onClick={(e) => handlePage(index + 1)}
                 aria-current="page"
                 className={`relative cursor-pointer z-10 inline-flex items-center ${index + 1 === page
-                    ? 'bg-indigo-600 text-white'
-                    : 'text-gray-400'
+                  ? 'bg-indigo-600 text-white'
+                  : 'text-gray-400'
                   } px-4 py-2 text-sm font-semibold  focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
               >
                 {index + 1}
@@ -465,13 +467,19 @@ function Pagination({ page, setPage, handlePage, totalItems }) {
 }
 function ProductGrid({ products }) {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
+       <button class="my-5 ml-96 bg-red-500 hover:bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg">
+            Add New Products    
+            </button>
       <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+       
           {products.map((product) => (
+            <div className="p-2">
             <Link to={`/product-detail/${product.id}`} key={product.id}>
               <div className="group relative border-solid border-2 p-2 border-gray-200">
                 <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+
                   <img
                     src={product.thumbnail}
                     alt={product.title}
@@ -489,6 +497,7 @@ function ProductGrid({ products }) {
                     <p className="mt-1 text-sm text-gray-500">
                       <StarIcon className="w-6 h-6 inline"></StarIcon>
                       <span className=" align-bottom">{product.rating}</span>
+
                     </p>
                   </div>
                   <div>
@@ -501,10 +510,16 @@ function ProductGrid({ products }) {
                     <p className="text-sm block line-through font-medium text-gray-400">
                       ${product.price}
                     </p>
+
                   </div>
                 </div>
               </div>
             </Link>
+            
+            <button class="mr-32 my-5 bg-cyan-700 hover:bg-gray-500 text-white font-bold py-1 px-8 rounded">
+              Edit Product
+            </button>
+           </div>
           ))}
         </div>
       </div>
