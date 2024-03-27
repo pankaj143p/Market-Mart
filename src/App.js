@@ -6,14 +6,14 @@ import PageNotFound from './Pages/404Page';
 import OrderSuccessPage from './Pages/orderSuccessPage';
 // import userOrders from './features/Authentication/Components/user/userOrders';
 import UserOrdersPage from './Pages/userOrderPage';
-import UserProfile from './features/user/userComponets/userProfile';
+// import UserProfile from './features/user/userComponets/userProfile';
 import UserProfilePage from './Pages/userProfilePage';
 import { fetchLoggedInUserAsync } from './features/user/userSlice';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
+  // Route,
+  // Link,
 } from 'react-router-dom';
 // import SignupPage from './Pages/SignupPage';
 // import Signup from './features/Authentication/Components/SignUp';
@@ -25,7 +25,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLoggedInUser } from './features/Authentication/AuthSlice';
 import { fetchItemsByUserIdAsync } from './features/Cart/CartSlice';
-import ProductList from './features/Product_List/ProductList';
+// import ProductList from './features/Product_List/ProductList';
 import Categories from './features/Categories/Categories';
 import ForgetPage from './Pages/ForgetPage';
 import LogoutPage from './Pages/LogoutPage';

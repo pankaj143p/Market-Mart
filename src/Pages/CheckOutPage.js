@@ -22,7 +22,7 @@ function Checkout() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: {  },
   } = useForm();
 
                 
