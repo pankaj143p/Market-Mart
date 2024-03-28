@@ -5,6 +5,7 @@ const initialState = {
   userOrders: [],
   status: 'idle',
   userInfo: null,
+  // adminOrders: [],
 
    //--> this info will be used in case of detailed user info, while auth will 
 };
@@ -73,6 +74,7 @@ export const userSlice = createSlice({
 });
 
 export const selectUserOrders = (state)=>state.user.userOrders;
+// export const selectAdminProducts = (state)=>state.admin.adminOrders;
 export const selectUserInfo = (state)=>state.user.userInfo;
 export const { increment } = userSlice.actions;
 
