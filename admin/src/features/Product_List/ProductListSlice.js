@@ -54,21 +54,21 @@ export const fetchCategoriesAsync = createAsyncThunk(
 
 
 export const createProductAsync = createAsyncThunk(
-  'product/create',
+  'product/createProduct',
   async (product) => {
     const response = await createProduct();
-    // The value we return becomes the `fulfilled` action payload
+    
     return response.data;
   }
 );
-export const updateProductAsync = createAsyncThunk(
-  'product/update',
-  async () => {
-    const response = await createProduct();
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
-  }
-);
+// export const updateProductAsync = createAsyncThunk(
+//   'product/update',
+//   async () => {
+//     const response = await createProduct();
+//     // The value we return becomes the `fulfilled` action payload
+//     return response.data;
+//   }
+// );
 
 
 
@@ -76,12 +76,12 @@ export const productSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {
-    clearSelectedProduct:(state)=>{
-      state.selectedProduct = null
-    }
-    // increment: (state) => {
-    //   state.value += 1;
-    // },
+    // clearSelectedProduct:(state)=>{
+    //   state.selectedProduct = null
+    // }
+    increment: (state) => {
+      state.value += 1;
+    },
   },
   extraReducers: (builder) => {
     builder

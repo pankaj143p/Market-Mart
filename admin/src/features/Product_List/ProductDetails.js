@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 import { addToCartAsync } from '../../features/Cart/CartSlice';
 import { selectLoggedInUser } from '../../features/Authentication/AuthSlice';
 
-// TODO: In server data we will add colors, sizes , highlights. to each product
 
 const colors = [
   { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },

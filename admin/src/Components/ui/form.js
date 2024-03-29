@@ -8,12 +8,11 @@ import {
   selectProductById,
   updateProductAsync,
 } from '../../features/Product_List/ProductListSlice';
-
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function Form() {
+function ProductForm() {
   const {
     register,
     handleSubmit,
@@ -27,13 +26,13 @@ function Form() {
   const params = useParams();
   const selectedProduct = useSelector(selectProductById);
 
-  useEffect(() => {
-    if (params.id) {
-      dispatch(fetchProductByIdAsync(params.id));
-    } else {
-      dispatch(clearSelectedProduct());
-    }
-  }, [params.id, dispatch]);
+//   useEffect(() => {
+//     if (params.id) {
+//       dispatch(fetchProductByIdAsync(params.id));
+//     } else {
+//       dispatch(clearSelectedProduct());
+//     }
+//   }, [params.id, dispatch]);
 
   useEffect(() => {
     if (selectedProduct && params.id) {
@@ -52,11 +51,11 @@ function Form() {
   }, [selectedProduct, params.id, setValue]);
 
 
-  const handleDelete = () =>{
-    const product = {...selectedProduct};
-    product.deleted = true;
-    dispatch(updateProductAsync(product));
-  }
+//   const handleDelete = () =>{
+//     const product = {...selectedProduct};
+//     product.deleted = true;
+//     dispatch(updateProductAsync(product));
+//   }
 
   return (
     <form
@@ -78,17 +77,17 @@ function Form() {
         product.stock = +product.stock;
         product.discountPercentage = +product.discountPercentage;
         console.log(product);
-        dispatch(createProductAsync(product))
-        if (params.id) {
-          product.id = params.id;
-          product.rating = selectedProduct.rating || 0;
-          dispatch(updateProductAsync(product));
-          reset();
-        } else {
+
+        // if (params.id) {
+        //   product.id = params.id;
+        //   product.rating = selectedProduct.rating || 0;
+        //   dispatch(updateProductAsync(product));
+        //   reset();
+        // } else {
           dispatch(createProductAsync(product));
-          reset();
+        //   reset();
           //TODO:  on product successfully added clear fields and show a message
-        }
+        // }
       })}
     >
       <div className="space-y-12 bg-white p-12">
@@ -426,14 +425,14 @@ function Form() {
           Cancel
         </button>
 
-       {selectedProduct && <button
+       {/* {selectedProduct && <button
           onClick={handleDelete}
           className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Delete
-        </button>}
+        </button>} */}
 
-        <button
+        <button onClick={handleSubmit}
           type="submit"
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
@@ -444,4 +443,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default ProductForm;

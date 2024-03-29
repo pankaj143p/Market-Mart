@@ -9,7 +9,7 @@ import UserOrdersPage from './Pages/userOrderPage';
 import UserProfile from './features/user/userComponets/userProfile';
 import UserProfilePage from './Pages/userProfilePage';
 import { fetchLoggedInUserAsync } from './features/user/userSlice';
-import Form from '../src/Components/ui/form'
+import ProductForm from '../src/Components/ui/form'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -102,7 +102,9 @@ const router = createBrowserRouter([
   {
     path: '/form',
     element: (
-      <Form></Form>
+      <Protected>
+        <ProductForm></ProductForm>
+      </Protected>
     ),
   },
   {
