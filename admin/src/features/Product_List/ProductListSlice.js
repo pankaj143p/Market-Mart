@@ -56,9 +56,10 @@ export const fetchCategoriesAsync = createAsyncThunk(
 export const createProductAsync = createAsyncThunk(
   'product/createProduct',
   async (product) => {
-    const response = await createProduct();
+    const response = await createProduct(product);
     
     return response.data;
+    // console.log(pp);
   }
 );
 // export const updateProductAsync = createAsyncThunk(
