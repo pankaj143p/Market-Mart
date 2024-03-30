@@ -518,10 +518,11 @@ function ProductGrid({ products }) {
                 </div>
               </div>
             </Link>
-            
+            <Link to='/editForm' >
             <button class="mr-32 my-5 bg-cyan-700 hover:bg-gray-500 text-white font-bold py-1 px-8 rounded">
-              Edit Product
+              Edit 
             </button>
+            </Link>
            </div>
           ))}
         </div>

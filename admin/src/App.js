@@ -30,6 +30,7 @@ import ProductList from './features/Product_List/ProductList';
 import Categories from './features/Categories/Categories';
 import ForgetPage from './Pages/ForgetPage';
 import LogoutPage from './Pages/LogoutPage';
+import ProductEditForm from './Components/ui/editForm';
 
 
 const router = createBrowserRouter([
@@ -104,6 +105,14 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <ProductForm></ProductForm>
+      </Protected>
+    ),
+  },
+  {
+    path: '/editForm',
+    element: (
+      <Protected>
+        <ProductEditForm></ProductEditForm>
       </Protected>
     ),
   },
