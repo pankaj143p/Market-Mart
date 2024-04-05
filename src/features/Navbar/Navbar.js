@@ -12,7 +12,7 @@ const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fuser-profile&psig=AOvVaw00EQbS2dGSMxCfZRrAgFI8&ust=1712123941700000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjI3uzsooUDFQAAAAAdAAAAABAE',
 };
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
