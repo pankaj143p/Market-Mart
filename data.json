@@ -2505,6 +2505,12 @@
       "email": "1234pankaj@gmail.com",
       "password": "112233Tit",
       "addresses": []
+    },
+    {
+      "id": "dbc3",
+      "email": "pankaj12@gmail.com",
+      "password": "112233pP",
+      "addresses": []
     }
   ],
   "cart": [
@@ -2793,7 +2799,6 @@
     {
       "id": "3f4e",
       "items": [
-      
         {
           "id": "bf4e",
           "title": "Skin Beauty Serum.",

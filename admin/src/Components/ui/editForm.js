@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
+import {Link} from 'react-router-dom';
+
 import {
   clearSelectedProduct,
   createProductAsync,
@@ -26,13 +28,13 @@ function ProductEditForm() {
   const params = useParams();
   const selectedProduct = useSelector(selectProductById);
 
-//   useEffect(() => {
-//     if (params.id) {
-//       dispatch(fetchProductByIdAsync(params.id));
-//     } else {
-//       dispatch(clearSelectedProduct());
-//     }
-//   }, [params.id, dispatch]);
+  useEffect(() => {
+    if (params.id) {
+      dispatch(fetchProductByIdAsync(params.id));
+    }// else {
+    //   dispatch(clearSelectedProduct());
+    // }
+  }, [params.id, dispatch]);
 
   useEffect(() => {
     if (selectedProduct && params.id) {
