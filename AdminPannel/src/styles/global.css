@@ -1,4 +1,7 @@
 /* Remove if fonts are not used */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import '~@fontsource/inter/100.css';
 @import '~@fontsource/inter/200.css';
 @import '~@fontsource/inter/300.css';

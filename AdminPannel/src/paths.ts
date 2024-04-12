@@ -8,6 +8,7 @@ export const paths = {
     customers: '/dashboard/customers',
     integrations: '/dashboard/integrations',
     settings: '/dashboard/settings',
+    form: '../src/app/dashboard/form.tsx',
   },
   errors: { notFound: '/errors/not-found' },
 } as const;

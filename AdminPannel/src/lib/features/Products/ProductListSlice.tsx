@@ -2,14 +2,26 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 // import { fetchAllProducts,fetchProductsByFilters } from './productAPI';
 // import { fetchAllProducts,fetchProductsByFilters, fetchBrands, fetchCategories } from './ProductListApi';
 import { fetchAllProducts, fetchProductsByFilters, fetchBrands, fetchCategories, fetchProductById,createProduct } from '@/lib/features/Products/ProductListApi';
-const initialState = {
-  products: [],
-  brands: [],
-  categories: [],
+import { RootState } from '@/lib/store';
+export interface productType{
+  products:[string],
+  brands:[string],
+  categories:[string],
+  status:string,
+  totalItems:number,
+  selectedProduct:string | null
+}
+
+const initialState:productType = {
+  products: [""],
+  brands: [""],
+  categories: [""],
   status: 'idle',
   totalItems: 0,
   selectedProduct: null
 };
+
+
 export const fetchProductsAsync = createAsyncThunk(
   'product/fetchAllProducts',
   async () => {
@@ -89,8 +101,8 @@ export const productSlice = createSlice({
     //   state.selectedProduct = null
     // }
     increment: (state) => {
-      //@ts-ignore
-      state.value += 1;
+
+      // state.value += 1;
     },
   },
   extraReducers: (builder) => {
@@ -143,20 +155,19 @@ export const productSlice = createSlice({
       })
   },
 });
-//@ts-ignore
-export const { clearSelectedProduct } = productSlice.actions;
+// export const { clearSelectedProduct } = productSlice.actions;
 
 export const { increment } = productSlice.actions;
-//@ts-ignore
-export const selectAllProducts = (state) => state.product.products;
-//@ts-ignore
-export const selectBrands = (state) => state.product.brands;
-//@ts-ignore
 
-export const selectCategories = (state) => state.product.categories;
-//@ts-ignore
-export const selectProductById = (state) => state.product.selectedProduct;
-//@ts-ignore
-export const selectTotalItems = (state) => state.product.totalItems;
+export const selectAllProducts = (state: RootState) => state.products;
+
+export const selectBrands = (state:RootState) => state.products.brands;
+
+
+export const selectCategories = (state: RootState) => state.products.categories;
+
+export const selectProductById = (state: RootState) => state.products.selectedProduct;
+
+export const selectTotalItems = (state:RootState) => state.products.totalItems;
 
 export default productSlice.reducer;

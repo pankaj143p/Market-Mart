@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
 import {
   fetchBrandsAsync,
   fetchCategoriesAsync,
@@ -10,6 +11,7 @@ import {
   selectCategories,
   selectTotalItems,
 } from '@/lib/features/Products/ProductListSlice';
+import form from '@/../../src/styles/theme/ui/form.tsx'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import {
@@ -69,12 +71,12 @@ export default function ProductList() {
     {
       id: 'category',
       name: 'Category',
-      options: categories,
+      options: categories.map((category: string) => ({ value: category, label: category })),
     },
     {
       id: 'brand',
       name: 'Brands',
-      options: brands,
+      options: brands.map((brand: string) => ({ value: brand, label: brand })),
     },
   ];
 
@@ -214,7 +216,7 @@ export default function ProductList() {
             />
             {/* Product grid */}
             <div className="lg:col-span-3">
-              <ProductGrid products={products} />
+              <ProductGrid products={products as unknown as Product[]} />
             </div>
             {/* Product grid end */}
           </div>
@@ -522,8 +524,16 @@ function Pagination({
 
 function ProductGrid({ products }: { products: Product[] }) {
   return (
+    <div className="bg-white ">
+    <div className='ml-96'>
+      <a href='form'>
+        <Button className='ml-96' variant="contained">Add New Products</Button>
+      </a>
+    </div>
+    <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
     <ul className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {products.map((product) => (
+      {Array.isArray(products) && products.map((product) => (
         <li key={product.id} className="bg-white overflow-hidden shadow-xl">
           <Link to={`/product/${product.id}`}>
             <div className="relative pb-2/3">
@@ -554,5 +564,8 @@ function ProductGrid({ products }: { products: Product[] }) {
         </li>
       ))}
     </ul>
+    </div>
+    </div>
+    </div>
   );
 }
