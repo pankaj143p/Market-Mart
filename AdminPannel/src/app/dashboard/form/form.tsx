@@ -1,16 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  clearSelectedProduct, 
-  createProductAsync,
-  fetchProductByIdAsync,
-  selectBrands,
-  selectCategories,
-  selectProductById,
-  updateProductAsync,
-} from '../../features/Product_List/ProductListSlice';
+
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import { selectBrands, selectCategories, selectProductById, createProductAsync } from '@/lib/features/Products/ProductListSlice';
 
 function ProductForm() {
   const {
@@ -36,7 +29,7 @@ function ProductForm() {
 
   useEffect(() => {
     if (selectedProduct && params.id) {
-      setValue('title', selectedProduct.title);
+      setValue('title', selectedProduct.title:'any');
       setValue('description', selectedProduct.description);
       setValue('price', selectedProduct.price);
       setValue('discountPercentage', selectedProduct.discountPercentage);

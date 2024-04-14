@@ -2498,7 +2498,17 @@
       "id": "3a7a",
       "email": "pankaj114477pankaj@gmail.com",
       "password": "112233pP",
-      "addresses": []
+      "addresses": [
+        {
+          "name": "Pankaj Prajapati",
+          "email": "pankaj114477pankaj@gmail.com",
+          "phone": "09179213653",
+          "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+          "city": "Madhusoodangarh",
+          "state": "Madhya Pradesh",
+          "pinCode": "473287"
+        }
+      ]
     },
     {
       "id": "9428",
@@ -2926,6 +2936,80 @@
       },
       "paymentMethod": "cash",
       "selectedAddress": null,
+      "status": "pending"
+    },
+    {
+      "id": "063f",
+      "items": [
+        {
+          "id": "df92",
+          "title": "Poco",
+          "description": "this is a phone",
+          "brand": "Dermive",
+          "category": "smartphones",
+          "price": 1299,
+          "discountPercentage": 2,
+          "stock": 3,
+          "thumbnail": "https://m.media-amazon.com/images/I/71h5+9-CgbL._SL1500_.jpg",
+          "images": [
+            "https://m.media-amazon.com/images/I/71JLhofuYJL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71h5+9-CgbL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71ZdFihN4YL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71h5+9-CgbL._SL1500_.jpg"
+          ],
+          "rating": 0,
+          "quantity": 4,
+          "user": "3a7a"
+        },
+        {
+          "id": "5b32",
+          "title": "Poco",
+          "description": "this is a phone",
+          "brand": "Dermive",
+          "category": "smartphones",
+          "price": 1299,
+          "discountPercentage": 2,
+          "stock": 3,
+          "thumbnail": "https://m.media-amazon.com/images/I/71h5+9-CgbL._SL1500_.jpg",
+          "images": [
+            "https://m.media-amazon.com/images/I/71JLhofuYJL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71h5+9-CgbL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71ZdFihN4YL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71h5+9-CgbL._SL1500_.jpg"
+          ],
+          "rating": 0,
+          "quantity": 1,
+          "user": "3a7a"
+        }
+      ],
+      "totalAmount": 6495,
+      "totalItems": 5,
+      "user": {
+        "id": "3a7a",
+        "email": "pankaj114477pankaj@gmail.com",
+        "password": "112233pP",
+        "addresses": [
+          {
+            "name": "Pankaj Prajapati",
+            "email": "pankaj114477pankaj@gmail.com",
+            "phone": "09179213653",
+            "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+            "city": "Madhusoodangarh",
+            "state": "Madhya Pradesh",
+            "pinCode": "473287"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pankaj Prajapati",
+        "email": "pankaj114477pankaj@gmail.com",
+        "phone": "09179213653",
+        "street": "Gapal mandir wali gali suthaliya road maksudhangar",
+        "city": "Madhusoodangarh",
+        "state": "Madhya Pradesh",
+        "pinCode": "473287"
+      },
       "status": "pending"
     }
   ]

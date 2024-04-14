@@ -11,7 +11,7 @@ import {
   selectCategories,
   selectTotalItems,
 } from '@/lib/features/Products/ProductListSlice';
-import form from '@/../../src/styles/theme/ui/form.tsx'
+
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import {
@@ -19,7 +19,7 @@ import {
   ChevronRightIcon,
   StarIcon,
 } from '@heroicons/react/20/solid';
-import { Link } from 'react-router-dom';
+import Link from "next/link"
 import {
   ChevronDownIcon,
   FunnelIcon,
@@ -526,16 +526,16 @@ function ProductGrid({ products }: { products: Product[] }) {
   return (
     <div className="bg-white ">
     <div className='ml-96'>
-      <a href='form'>
+      <Link href='form'>
         <Button className='ml-96' variant="contained">Add New Products</Button>
-      </a>
+      </Link>
     </div>
     <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
     <ul className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {Array.isArray(products) && products.map((product) => (
         <li key={product.id} className="bg-white overflow-hidden shadow-xl">
-          <Link to={`/product/${product.id}`}>
+          <Link href={`/product/${product.id}`}>
             <div className="relative pb-2/3">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
@@ -546,7 +546,7 @@ function ProductGrid({ products }: { products: Product[] }) {
           </Link>
           <div className="px-4 py-4">
             <h3 className="text-sm font-medium text-gray-900">
-              <Link to={`/product/${product.id}`} className="hover:underline">
+              <Link href={`/product/${product.id}`} className="hover:underline">
                 {product.title}
               </Link>
             </h3>
