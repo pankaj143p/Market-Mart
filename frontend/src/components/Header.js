@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import Logo from './Logo'
 import { GrSearch } from "react-icons/gr";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa";
@@ -10,6 +9,7 @@ import { toast } from 'react-toastify'
 import { setUserDetails } from '../store/userSlice';
 import ROLE from '../common/role';
 import Context from '../context';
+// import '../'
 
 const Header = () => {
   const user = useSelector(state => state?.user?.user)
@@ -57,7 +57,11 @@ const Header = () => {
       <div className=' h-full container mx-auto flex items-center px-4 justify-between'>
             <div className=''>
                 <Link to={"/"}>
-                    <Logo w={90} h={50}/>
+                <p class="py-2 px-5 text-lg text-white rounded-md tracking-widest font-bold uppercase transition-shadow duration-500 bg-red-600 shadow-[0_0_10px_rgb(185,0,0)] hover:shadow-[0_0_5px_rgb(185,0,0),0_0_15px_rgb(185,0,0),0_0_30px_rgb(180,0,0),0_0_60px_rgb(185,0,0)]">
+                  Market Mart
+                </p>
+
+
                 </Link>
             </div>
 
