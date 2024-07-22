@@ -1,7 +1,5 @@
 const express = require('express')
-
 const router = express.Router()
-
 const userSignUpController = require("../controller/user/userSignUp")
 const adminSignUpController = require("../controller/user/adminSignUp")
 const userSignInController = require('../controller/user/userSignIn')

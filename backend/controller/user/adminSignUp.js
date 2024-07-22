@@ -33,7 +33,7 @@ async function adminSignUpController(req,res){
 
         const payload = {
             ...req.body,
-            role : "GENERAL",
+            role : "ADMIN",
             password : hashPassword
         }
 

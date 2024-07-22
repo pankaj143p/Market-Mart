@@ -50,8 +50,8 @@ const SignUp = () => {
 
       if(data.password === data.confirmPassword){
 
-        const dataResponse = await fetch(SummaryApi.signUP.url,{
-            method : SummaryApi.signUP.method,
+        const dataResponse = await fetch(SummaryApi.adminSignUP.url,{
+            method : SummaryApi.adminSignUP.method,
             headers : {
                 "content-type" : "application/json"
             },
