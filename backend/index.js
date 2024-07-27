@@ -22,7 +22,7 @@ app.use("/api",router)
 
 const PORT = 8080 || process.env.PORT
 
-
+// connect database 
 connectDB().then(()=>{
     app.listen(PORT,()=>{
         console.log("connnect to DB")
