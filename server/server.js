@@ -57,6 +57,11 @@
 // app.use("/api/common/feature", commonFeatureRouter);
 
 // app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
+const EventEmitter = require('events');
+EventEmitter.defaultMaxListeners = 20;
+
+// Your application code here
+
 
 require('dotenv').config();
 
