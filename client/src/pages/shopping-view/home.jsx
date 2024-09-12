@@ -122,7 +122,7 @@ function ShoppingHome() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="relative w-full h-[600px] overflow-hidden">
+      <div className="relative w-full h-[470px] overflow-hidden mt-6">
         {featureImageList && featureImageList.length > 0
           ? featureImageList.map((slide, index) => (
               <img
