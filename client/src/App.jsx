@@ -22,6 +22,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
 import SearchProducts from "./pages/shopping-view/search";
+import SellingChart from "./pages/admin-view/SellingChart";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -72,6 +73,7 @@ function App() {
           <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
           <Route path="features" element={<AdminFeatures />} />
+          <Route path="sellingchart" element={<SellingChart/>} />
         </Route>
         <Route
           path="/shop"
