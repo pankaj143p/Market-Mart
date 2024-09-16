@@ -2,7 +2,7 @@
 	"name": "Market-Mart-store",
 	"version": "1.0.0",
 	"description": "",
-	"main": "backend/server.js",
+	"main": "server.js",
 	"scripts": {
 		"dev": "nodemon backend/server.js",
 		"start": "node backend/server.js",
