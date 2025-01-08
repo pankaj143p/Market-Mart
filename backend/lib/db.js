@@ -37,7 +37,7 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
     try {
-        const conn = await mongoose.connect("mongodb://localhost:27017/newecom");
+        const conn = await mongoose.connect( process.env.MONGO_URL || "mongodb://localhost:27017/marketmart");
         console.log(`MongoDB connected: ${conn.connection.host,conn}`);
     } catch (error) {
         console.log("Error connecting to MONGODB", error.message);
