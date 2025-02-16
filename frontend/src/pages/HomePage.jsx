@@ -1,44 +1,27 @@
-import { useEffect } from "react";
-import CategoryItem from "../components/CategoryItem";
-import { useProductStore } from "../stores/useProductStore";
-import FeaturedProducts from "../components/FeaturedProducts";
+import React, { useEffect } from 'react'
+import { Navbar } from '../features/navigation/components/Navbar'
+import { ProductList } from '../features/products/components/ProductList'
+import { resetAddressStatus, selectAddressStatus } from '../features/address/AddressSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import {Footer} from '../features/footer/Footer'
 
-const categories = [
-	{ href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },
-	{ href: "/t-shirts", name: "T-shirts", imageUrl: "/tshirts.jpg" },
-	{ href: "/shoes", name: "Shoes", imageUrl: "/shoes.jpg" },
-	{ href: "/glasses", name: "Glasses", imageUrl: "/glasses.png" },
-	{ href: "/jackets", name: "Jackets", imageUrl: "/jackets.jpg" },
-	{ href: "/suits", name: "Suits", imageUrl: "/suits.jpg" },
-	{ href: "/bags", name: "Bags", imageUrl: "/bags.jpg" },
-];
+export const HomePage = () => {
 
-const HomePage = () => {
-	const { fetchFeaturedProducts, products, isLoading } = useProductStore();
+  const dispatch=useDispatch()
+  const addressStatus=useSelector(selectAddressStatus)
 
-	useEffect(() => {
-		fetchFeaturedProducts();
-	}, [fetchFeaturedProducts]);
+  useEffect(()=>{
+    if(addressStatus==='fulfilled'){
 
-	return (
-		<div className='relative min-h-screen text-white overflow-hidden'>
-			<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-				<h1 className='text-center text-5xl sm:text-6xl font-bold text-emerald-400 mb-4'>
-					Explore Our Categories
-				</h1>
-				<p className='text-center text-xl text-gray-300 mb-12'>
-					Discover the latest trends in eco-friendly fashion
-				</p>
+      dispatch(resetAddressStatus())
+    }
+  },[addressStatus])
 
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-					{categories.map((category) => (
-						<CategoryItem category={category} key={category.name} />
-					))}
-				</div>
-
-				{!isLoading && products.length > 0 && <FeaturedProducts featuredProducts={products} />}
-			</div>
-		</div>
-	);
-};
-export default HomePage;
+  return (
+    <>
+    <Navbar isProductList={true}/>
+    <ProductList/>
+    <Footer/>
+    </>
+  )
+}
