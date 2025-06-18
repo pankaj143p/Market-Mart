@@ -1,0 +1,13 @@
+@use "../../App.scss" as app;
+
+.dash-container {
+  margin: 1rem;
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    .row-left {
+      display: flex;
+    }
+  }
+}
