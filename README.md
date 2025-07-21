@@ -1,63 +1,36 @@
-# Minimal E-Commerce Store (MERN Stack)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-![Project Preview](./client/src/assets/preview.png)
+## Getting Started
 
-Welcome to our Minimal E-Commerce Store built using the MERN (MongoDB, Express, React, Node.js) stack. This application provides a user-friendly and efficient platform for browsing, searching, and purchasing products. It includes features such as user authentication, product categorization, shopping cart management, secure payment processing, and more.
+First, run the development server:
 
-## Features
-
-- User Registration and Authentication
-- Browse Products by Categories
-- Product Details and Descriptions
-- Add and Manage Products in the Shopping Cart
-- Secure Payment Processing through Braintree
-- User Profile Management
-- Admin Dashboard for Product and Category Management
-
-## Deployment
-
-The application has been successfully deployed and can be accessed at [Live Demo](https://drab-gold-narwhal-gown.cyclic.cloud/).
-
-## Technologies Used
-
-- Frontend: React, Vite
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Payment Integration: Braintree
-- Styling: SCSS
-- State Management: Context API
-- Routing: React Router
-- Authentication: JWT (JSON Web Tokens)
-- Deployment: Cyclic
-
-## Main Repo
-
-```
-git clone https://github.com/alphadev97/ecommerce-mern-project
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Deployed Repo
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-git clone https://github.com/alphadev97/production-ecommerce-mern.git
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## .env Variables
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```
-PORT =
-DEV_MODE =
-MONGO_URL =
-JWT_SECRET =
-BRAINTREE_MERCHANT_ID =
-BRAINTREE_PUBLIC_KEY =
-BRAINTREE_PRIVATE_KEY =
-```
+## Learn More
 
-## Contributing
+To learn more about Next.js, take a look at the following resources:
 
-Contributions are welcome! Please create a pull request or open an issue if you encounter any bugs or have suggestions for improvements.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## License
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-This project is licensed under the [MIT License](./LICENSE).
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
