@@ -3,3 +3,7 @@ node_modules/
 
 # Ignore .env file
 .env
+.next
+
+# clerk configuration (can include secrets)
+/.clerk/

@@ -23,7 +23,7 @@ const NotFoundPage = () => {
               href="/"
               className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-semibold rounded-md text-white bg-shop_dark_green/80 hover:bg-shop_dark_green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amazonOrangeDark hoverEffect"
             >
-              Go to Shopcart&apos;s home page
+              Go to Market Mart&apos;s home page
             </Link>
             <Link
               href="/help"
