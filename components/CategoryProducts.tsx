@@ -14,6 +14,7 @@ interface Props {
 }
 
 const CategoryProducts = ({ categories, slug }: Props) => {
+  // State management
   const [currentSlug, setCurrentSlug] = useState(slug);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
