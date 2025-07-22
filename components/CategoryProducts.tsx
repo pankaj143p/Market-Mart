@@ -14,7 +14,6 @@ interface Props {
 }
 
 const CategoryProducts = ({ categories, slug }: Props) => {
-  // State management
   const [currentSlug, setCurrentSlug] = useState(slug);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -24,7 +23,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
     setCurrentSlug(newSlug);
     router.push(`/category/${newSlug}`, { scroll: false }); // Update URL without
   };
-
+  
   const fetchProducts = async (categorySlug: string) => {
     setLoading(true);
     try {
@@ -41,6 +40,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
       setLoading(false);
     }
   };
+  // Fetch products when the component mounts or when the slug changes
   useEffect(() => {
     fetchProducts(currentSlug);
   }, [router]);
