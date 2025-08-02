@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "name": "iPhone 15 Pro Max",
+      "slug": "iphone-15-pro-max",
+      "description": "The most advanced iPhone with titanium design, A17 Pro chip, and professional camera system.",
+      "price": 1199,
+      "discount": 5,
+      "stock": 25,
+      "status": "new",
+      "variant": "gadget",
+      "isFeatured": true,
+      "categories": ["Smartphones", "Electronics"],
+      "brand": "Apple",
+      "images": [
+        "https://example.com/iphone-15-pro-max-1.jpg",
+        "https://example.com/iphone-15-pro-max-2.jpg"
+      ]
+    },
+    {
+      "name": "Samsung 4K Smart TV 65\"",
+      "slug": "samsung-4k-smart-tv-65",
+      "description": "Crystal clear 4K display with smart features and voice control.",
+      "price": 899,
+      "discount": 15,
+      "stock": 15,
+      "status": "sale",
+      "variant": "appliances",
+      "isFeatured": true,
+      "categories": ["TVs", "Electronics", "Home Appliances"],
+      "brand": "Samsung",
+      "images": [
+        "https://example.com/samsung-tv-1.jpg",
+        "https://example.com/samsung-tv-2.jpg"
+      ]
+    },
+    {
+      "name": "LG French Door Refrigerator",
+      "slug": "lg-french-door-refrigerator",
+      "description": "Energy-efficient French door refrigerator with smart features.",
+      "price": 1899,
+      "discount": 10,
+      "stock": 8,
+      "status": "hot",
+      "variant": "refrigerators",
+      "isFeatured": false,
+      "categories": ["Refrigerators", "Kitchen Appliances"],
+      "brand": "LG",
+      "images": [
+        "https://example.com/lg-fridge-1.jpg",
+        "https://example.com/lg-fridge-2.jpg"
+      ]
+    }
+  ]
+}
