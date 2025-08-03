@@ -1,4 +1,4 @@
-import { getCurrentUserAdminInfo } from '@/lib/admin'
+// import { getCurrentUserAdminInfo } from '@/lib/admin'
 import AdminDashboard from '@/components/AdminDashboard'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -11,30 +11,31 @@ export const metadata: Metadata = {
 }
 
 export default async function AdminPage() {
-  const { isAdmin, user, userEmail } = await getCurrentUserAdminInfo()
+  // Temporarily disable admin checks until Clerk is configured
+  // const { isAdmin, user, userEmail } = await getCurrentUserAdminInfo()
 
-  if (!isAdmin) {
-    return (
-      <div className="container mx-auto py-12">
-        <Card className="max-w-md mx-auto">
-          <CardHeader>
-            <CardTitle className="text-center">🚫 Access Denied</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="mb-4">You don't have admin privileges.</p>
-            <Link href="/">
-              <Button>Return to Home</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </div>
-    )
-  }
+  // if (!isAdmin) {
+  //   return (
+  //     <div className="container mx-auto py-12">
+  //       <Card className="max-w-md mx-auto">
+  //         <CardHeader>
+  //           <CardTitle className="text-center">🚫 Access Denied</CardTitle>
+  //         </CardHeader>
+  //         <CardContent className="text-center">
+  //           <p className="mb-4">You don't have admin privileges.</p>
+  //           <Link href="/">
+  //             <Button>Return to Home</Button>
+  //           </Link>
+  //         </CardContent>
+  //       </Card>
+  //     </div>
+  //   )
+  // }
 
-  // Create serializable user info
+  // Create mock user info for now
   const userInfo = {
-    firstName: user?.firstName || null,
-    email: userEmail
+    firstName: 'Admin',
+    email: 'pankaj114477pankaj@gmail.com'
   }
 
   return <AdminDashboard userInfo={userInfo} />

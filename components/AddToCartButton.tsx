@@ -13,11 +13,13 @@ interface Props {
   className?: string;
 }
 
+// This component is used to add a product to the cart, displaying the quantity and subtotal if already added.
 const AddToCartButton = ({ product, className }: Props) => {
   const { addItem, getItemCount } = useStore();
   const itemCount = getItemCount(product?._id);
   const isOutOfStock = product?.stock === 0;
-
+  
+  // Function to handle adding the product to the cart
   const handleAddToCart = () => {
     if ((product?.stock as number) > itemCount) {
       addItem(product);
