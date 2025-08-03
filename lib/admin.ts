@@ -9,15 +9,14 @@ export async function isCurrentUserAdmin(): Promise<boolean> {
     const userEmail = user.emailAddresses[0]?.emailAddress || ''
     return isAdminEmail(userEmail)
   } catch (error) {
-    console.error('Error checking admin status:', error)
+    console.error('Clerk authentication error:', error)
+    // Return false if Clerk is not properly configured
     return false
   }
 }
 
 // Check if email is admin
 export function isAdminEmail(email: string): boolean {
-  if (!email) return false
-  
   // Get admin emails from environment variables
   const adminEmails = process.env.ADMIN_EMAILS?.split(',').map(email => email.trim()) || []
   
@@ -34,7 +33,7 @@ export function isAdminEmail(email: string): boolean {
 export async function getCurrentUserAdminInfo() {
   try {
     const user = await currentUser()
-    if (!user) return { isAdmin: false, user: null, userEmail: '' }
+    if (!user) return { isAdmin: false, user: null }
     
     const userEmail = user.emailAddresses[0]?.emailAddress || ''
     const isAdmin = isAdminEmail(userEmail)
@@ -45,7 +44,7 @@ export async function getCurrentUserAdminInfo() {
       userEmail
     }
   } catch (error) {
-    console.error('Error getting user admin info:', error)
-    return { isAdmin: false, user: null, userEmail: '' }
+    console.error('Clerk authentication error in getCurrentUserAdminInfo:', error)
+    return { isAdmin: false, user: null }
   }
 }

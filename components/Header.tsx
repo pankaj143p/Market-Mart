@@ -21,6 +21,9 @@ const Header = async () => {
     orders = await getMyOrders(userId);
   }
 
+  // Extract only plain data from user object for client components
+  const isLoggedIn = !!user;
+
   return (
     <header className="sticky top-0 z-50 py-5 bg-white/70 backdrop-blur-md">
       <Container className="flex items-center justify-between text-lightColor">
@@ -34,7 +37,7 @@ const Header = async () => {
           <CartIcon />
           <FavoriteButton />
 
-          {user && (
+          {isLoggedIn && (
             <Link
               href={"/orders"}
               className="group relative hover:text-shop_light_green hoverEffect"
@@ -50,7 +53,7 @@ const Header = async () => {
             <SignedIn>
               <UserButton />
             </SignedIn>
-            {!user && <SignIn />}
+            {!isLoggedIn && <SignIn />}
           </ClerkLoaded>
         </div>
       </Container>

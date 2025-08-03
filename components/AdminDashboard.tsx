@@ -4,19 +4,21 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
-interface AdminDashboardProps {
-  userInfo: {
-    firstName?: string | null
-    email?: string
-  }
+interface SerializableUser {
+  firstName?: string | null
+  email?: string
 }
 
-const AdminDashboard = ({ userInfo }: AdminDashboardProps) => {
+interface AdminDashboardProps {
+  user: SerializableUser | null
+}
+
+const AdminDashboard = ({ user }: AdminDashboardProps) => {
   return (
     <div className="container mx-auto py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          Welcome, {userInfo?.firstName || 'Admin'} 👋
+          Welcome, {user?.firstName || 'Admin'} 👋
         </h1>
         <p className="text-gray-600">
           Manage your e-commerce store from here
