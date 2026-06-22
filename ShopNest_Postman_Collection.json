@@ -1,0 +1,690 @@
+{
+  "info": {
+    "_postman_id": "2457ef87-a7a7-401c-a6cf-94d3402bc0d8",
+    "name": "MarketMart - MERN",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27830807"
+  },
+  "item": [
+    {
+      "name": "AUTH",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{endpoint}}/",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Shivansh\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"pass123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/auth/register",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"pass123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/auth/login",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN -- GET ALL USERS",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZThhNTNjYzgwZTc1NTE4YmEwMWRhYSIsImlhdCI6MTc3Njg1NDM0OCwiZXhwIjoxNzc5NDQ2MzQ4fQ.--m4sCuAYuZwS0cRDNRR7uDzt6cIYMTwcmFno_RD5W8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/auth/users",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg0NTgyMCwiZXhwIjoxNzc5NDM3ODIwfQ.YAl0_krpdXnh4YUYZOnsaT-gOyOkVwOmxdPtjGqcfm8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Shivansh\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"pass123\"\r\n}"
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/products/",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get one Product",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg0NTgyMCwiZXhwIjoxNzc5NDM3ODIwfQ.YAl0_krpdXnh4YUYZOnsaT-gOyOkVwOmxdPtjGqcfm8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Shivansh\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"pass123\"\r\n}"
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/products/69e88d27e51103fdd44cb50c",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "69e88d27e51103fdd44cb50c"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN -- Create New Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg0ODE0MiwiZXhwIjoxNzc5NDQwMTQyfQ.AzBNVvkuoxFQ6dC27wgXPkGbuplZv7FWRkVAKW5FPjs",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Product Name 1"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Product Description "
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "99"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Electronics"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "50"
+                },
+                {
+                  "type": "file",
+                  "key": "image",
+                  "src": "/C:/Users/LENOVO/Downloads/244987_2550267.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/products' \\\r\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\r\n--form 'name=\"Product Name\"' \\\r\n--form 'description=\"Product Description\"' \\\r\n--form 'price=\"99.99\"' \\\r\n--form 'category=\"Electronics\"' \\\r\n--form 'stock=\"50\"' \\\r\n--form 'image=@\"/path/to/image.jpg\"'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN -- Edit Single Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg0ODE0MiwiZXhwIjoxNzc5NDQwMTQyfQ.AzBNVvkuoxFQ6dC27wgXPkGbuplZv7FWRkVAKW5FPjs",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Updated Product Name"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "149.99"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "100"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/69e88d27e51103fdd44cb50c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                "69e88d27e51103fdd44cb50c"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/products/PRODUCT_ID' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--form 'name=\"Updated Product Name\"' \\\n--form 'description=\"Updated Description\"' \\\n--form 'price=\"149.99\"' \\\n--form 'category=\"Electronics\"' \\\n--form 'stock=\"100\"' \\\n--form 'image=@\"/path/to/image.jpg\"'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN -- Delete Single Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg0ODE0MiwiZXhwIjoxNzc5NDQwMTQyfQ.AzBNVvkuoxFQ6dC27wgXPkGbuplZv7FWRkVAKW5FPjs",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Updated Product Name"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "149.99"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "100"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/69e88d27e51103fdd44cb50c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                "69e88d27e51103fdd44cb50c"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/products/PRODUCT_ID' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--form 'name=\"Updated Product Name\"' \\\n--form 'description=\"Updated Description\"' \\\n--form 'price=\"149.99\"' \\\n--form 'category=\"Electronics\"' \\\n--form 'stock=\"100\"' \\\n--form 'image=@\"/path/to/image.jpg\"'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Place A Order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZThhNTNjYzgwZTc1NTE4YmEwMWRhYSIsImlhdCI6MTc3Njg1NDM0OCwiZXhwIjoxNzc5NDQ2MzQ4fQ.--m4sCuAYuZwS0cRDNRR7uDzt6cIYMTwcmFno_RD5W8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    {\n      \"productId\": \"69e88d82e51103fdd44cb50d\",\n      \"qty\": 2,\n      \"price\": 99.99\n    }\n  ],\n  \"totalAmount\": 199.98,\n  \"address\": {\n    \"fullName\": \"John Doe\",\n    \"street\": \"123 Main Street\",\n    \"city\": \"New York\",\n    \"postalCode\": \"10001\",\n    \"country\": \"United States\"\n  },\n  \"paymentId\": \"pay_123456789\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/orders' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--header 'Content-Type: application/json' \\\n--data '{\n  \"items\": [\n    {\n      \"productId\": \"PRODUCT_ID_1\",\n      \"quantity\": 2,\n      \"price\": 50.00\n    },\n    {\n      \"productId\": \"PRODUCT_ID_2\",\n      \"quantity\": 1,\n      \"price\": 75.00\n    }\n  ],\n  \"totalAmount\": 175.00,\n  \"address\": \"123 Main Street, City, Country, 12345\",\n  \"paymentId\": \"PAYMENT_ID_12345\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN -- ALL ORDERS",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg1MjIwMiwiZXhwIjoxNzc5NDQ0MjAyfQ.AlqHeCYBvRGsC5qhqDFXzYaElbUeU82fDU2dkMRr6Mk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/orders' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--header 'Content-Type: application/json' \\\n--data '{\n  \"items\": [\n    {\n      \"productId\": \"PRODUCT_ID_1\",\n      \"quantity\": 2,\n      \"price\": 50.00\n    },\n    {\n      \"productId\": \"PRODUCT_ID_2\",\n      \"quantity\": 1,\n      \"price\": 75.00\n    }\n  ],\n  \"totalAmount\": 175.00,\n  \"address\": \"123 Main Street, City, Country, 12345\",\n  \"paymentId\": \"PAYMENT_ID_12345\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN -- Update ORDER Status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg1MjIwMiwiZXhwIjoxNzc5NDQ0MjAyfQ.AlqHeCYBvRGsC5qhqDFXzYaElbUeU82fDU2dkMRr6Mk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"shipped\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders/69e89c7ce26672d7f8d0a6ec/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders",
+                "69e89c7ce26672d7f8d0a6ec",
+                "status"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/orders' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--header 'Content-Type: application/json' \\\n--data '{\n  \"items\": [\n    {\n      \"productId\": \"PRODUCT_ID_1\",\n      \"quantity\": 2,\n      \"price\": 50.00\n    },\n    {\n      \"productId\": \"PRODUCT_ID_2\",\n      \"quantity\": 1,\n      \"price\": 75.00\n    }\n  ],\n  \"totalAmount\": 175.00,\n  \"address\": \"123 Main Street, City, Country, 12345\",\n  \"paymentId\": \"PAYMENT_ID_12345\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "My Orders",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg1MjIwMiwiZXhwIjoxNzc5NDQ0MjAyfQ.AlqHeCYBvRGsC5qhqDFXzYaElbUeU82fDU2dkMRr6Mk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders/myorders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders",
+                "myorders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/orders' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--header 'Content-Type: application/json' \\\n--data '{\n  \"items\": [\n    {\n      \"productId\": \"PRODUCT_ID_1\",\n      \"quantity\": 2,\n      \"price\": 50.00\n    },\n    {\n      \"productId\": \"PRODUCT_ID_2\",\n      \"quantity\": 1,\n      \"price\": 75.00\n    }\n  ],\n  \"totalAmount\": 175.00,\n  \"address\": \"123 Main Street, City, Country, 12345\",\n  \"paymentId\": \"PAYMENT_ID_12345\"\n}'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "ADMIN -- Analytics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg4MzA5NzBmYzk5N2VmYzVlZDJmZSIsImlhdCI6MTc3Njg1MjIwMiwiZXhwIjoxNzc5NDQ0MjAyfQ.AlqHeCYBvRGsC5qhqDFXzYaElbUeU82fDU2dkMRr6Mk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN_HERE"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/analytics/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "analytics",
+                ""
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/orders' \\\n--header 'Authorization: Bearer YOUR_TOKEN_HERE' \\\n--header 'Content-Type: application/json' \\\n--data '{\n  \"items\": [\n    {\n      \"productId\": \"PRODUCT_ID_1\",\n      \"quantity\": 2,\n      \"price\": 50.00\n    },\n    {\n      \"productId\": \"PRODUCT_ID_2\",\n      \"quantity\": 1,\n      \"price\": 75.00\n    }\n  ],\n  \"totalAmount\": 175.00,\n  \"address\": \"123 Main Street, City, Country, 12345\",\n  \"paymentId\": \"PAYMENT_ID_12345\"\n}'"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "endpoint",
+      "value": ""
+    }
+  ]
+}
